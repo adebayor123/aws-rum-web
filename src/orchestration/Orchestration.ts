@@ -290,14 +290,14 @@ export class Orchestration {
     }
 
     /**
-     * Force the cllient to immediately dispatch events to the collector.
+     * Force the client to immediately dispatch events to the collector.
      */
     public dispatch(): void {
         this.dispatchManager.dispatchFetch();
     }
 
     /**
-     * Force the cllient to immediately dispatch events to the collector using a beacon.
+     * Force the client to immediately dispatch events to the collector using a beacon.
      */
     public dispatchBeacon(): void {
         this.dispatchManager.dispatchBeacon();
@@ -358,6 +358,15 @@ export class Orchestration {
             DOM_EVENT_PLUGIN_ID,
             events
         );
+    }
+
+    /**
+     * Records a custom event.
+     * @param type A unique name for the type of event being recorded.
+     * @param eventData A JSON object containing the event's attributes.
+     */
+    public recordEvent(eventType: string, eventData: object) {
+        this.eventCache.recordEvent(eventType, eventData);
     }
 
     private initEventCache(
