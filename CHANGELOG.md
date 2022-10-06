@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0-alpha.0](https://github.com/aws-observability/aws-rum-web/compare/v1.8.1...v1.10.0-alpha.0) (2022-10-06)
+
+
+### Features
+
+* Add recordEvent API and expose Plugin to enable recording of custom events ([bb92e99](https://github.com/aws-observability/aws-rum-web/commit/bb92e9921a506653924796f6b5fed01b465147d4))
+* Add useBeacon config for visibilitychange dispatch behavior. ([#194](https://github.com/aws-observability/aws-rum-web/issues/194)) ([00ef55f](https://github.com/aws-observability/aws-rum-web/commit/00ef55fe9af8c1a23d1689035a413341de6bd80e))
+
+
+### Bug Fixes
+
+* Fix MonkeyPatch type arg. ([#222](https://github.com/aws-observability/aws-rum-web/issues/222)) ([3218294](https://github.com/aws-observability/aws-rum-web/commit/3218294f4e1bae98cfcaa44c39370407699e047c))
+
 ## [1.9.0](https://github.com/aws-observability/aws-rum-web/compare/v1.7.0...v1.9.0) (2022-10-04)
 
 
