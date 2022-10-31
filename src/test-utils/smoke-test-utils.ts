@@ -30,6 +30,8 @@ export const getUrl = (testUrl, version) => {
  * Returns true if the request is a successful PutRumEvents request
  */
 export const isDataPlaneRequest = (response, targetUrl) => {
+    console.log('request found');
+    console.log(response.url());
     const request = response.request();
     return (
         request.method() === 'POST' &&

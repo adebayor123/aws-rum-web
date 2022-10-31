@@ -40,6 +40,7 @@ test('when session start event is sent then event is ingested', async ({
     const timestamp = Date.now() - 30000;
 
     // Open page
+    console.log(TEST_URL);
     await page.goto(TEST_URL);
 
     // Test will timeout if no successful dataplane request is found
@@ -67,6 +68,7 @@ test('when resource event is sent then event is ingested', async ({ page }) => {
     const timestamp = Date.now() - 30000;
 
     // Open page
+    console.log(TEST_URL);
     await page.goto(TEST_URL);
 
     // Test will timeout if no successful dataplane request is found
@@ -97,6 +99,7 @@ test('when LCP event is sent then event is ingested', async ({ page }) => {
     const timestamp = Date.now() - 30000;
 
     // Open page
+    console.log(TEST_URL);
     await page.goto(TEST_URL);
     const clearButton = page.locator('[id=dummyButton]');
     await clearButton.click();
@@ -127,6 +130,7 @@ test('when FID event is sent then event is ingested', async ({ page }) => {
     const timestamp = Date.now() - 30000;
 
     // Open page
+    console.log(TEST_URL);
     await page.goto(TEST_URL);
     const clearButton = page.locator('[id=dummyButton]');
     await clearButton.click();
@@ -228,6 +232,7 @@ test('when error events are sent then the events are ingested', async ({
     const timestamp = Date.now() - 30000;
 
     // Open page
+    console.log(TEST_URL);
     await page.goto(TEST_URL);
     const typeError = page.locator('[id=triggerTypeError]');
     const stringError = page.locator('[id=throwErrorString]');
