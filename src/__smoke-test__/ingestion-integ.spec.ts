@@ -47,7 +47,7 @@ test('when session start event is sent then event is ingested', async ({
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -75,7 +75,7 @@ test('when resource event is sent then event is ingested', async ({ page }) => {
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -108,7 +108,7 @@ test('when LCP event is sent then event is ingested', async ({ page }) => {
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -139,7 +139,7 @@ test('when FID event is sent then event is ingested', async ({ page }) => {
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -171,7 +171,7 @@ test('when navigation events are sent then events are ingested', async ({
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -207,7 +207,7 @@ test('when page view event is sent then the event is ingested', async ({
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -245,7 +245,7 @@ test('when error events are sent then the events are ingested', async ({
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -280,7 +280,7 @@ test('when http events are sent then the events are ingested', async ({
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -316,7 +316,7 @@ test('when CLS event is sent then the event is ingested', async ({ page }) => {
             TARGET_URL.substring(0, TARGET_URL.length - 1)
         )
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -349,7 +349,7 @@ test('when dom event is sent then the event is ingested', async ({ page }) => {
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 
@@ -380,7 +380,7 @@ test('when xray event is sent then the event is ingested', async ({ page }) => {
     const response = await page.waitForResponse(async (response) =>
         isDataPlaneRequest(response, TARGET_URL)
     );
-
+    console.log('Found the correct request');
     // Parse payload to verify event count
     const requestBody = JSON.parse(response.request().postData());
 

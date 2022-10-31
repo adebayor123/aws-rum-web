@@ -31,8 +31,10 @@ export const getUrl = (testUrl, version) => {
  */
 export const isDataPlaneRequest = (response, targetUrl) => {
     console.log('request found');
-    console.log(response.url());
+    console.log('response:: ' + response.url());
+    console.log('target:' + targetUrl);
     const request = response.request();
+    console.log(request);
     return (
         request.method() === 'POST' &&
         response.status() === 200 &&
